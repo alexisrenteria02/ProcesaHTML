@@ -28,7 +28,8 @@ public class ProcesaHTML {
         HTMLEditorKit.Parser procesador = p.getParser();
 
         try {
-            procesador.parse(fileReader, new ManejadorEtiquetas(), true);
+            //procesador.parse(fileReader, new ManejadorEtiquetas(), true);
+            procesador.parse(fileReader, new ProcesaParrrafo(), true);
         } catch (IOException e) {
             Log.severe("No se puede leer el documento HTML");
             System.exit(3);
